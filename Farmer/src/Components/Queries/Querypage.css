@@ -12,3 +12,8 @@ h1 {
   text-align: center;
   color: #333;
 }
+
+.query-form {
+  display: flex;
+  flex-direction: column;
+}
