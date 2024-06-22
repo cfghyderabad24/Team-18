@@ -7,7 +7,7 @@ const Cards = () => {
 
   const cardsData = [
     { id: 1, title: 'Data visualization with tables', icon: '📊', path: '/grid-example' },
-    { id: 2, title: 'Data visualization with charts', icon: '📈' },
+    { id: 2, title: 'Data visualization with charts', icon: '📈' , path: '/new-message' },
     { id: 3, title: 'Respond to given queries', icon: '💬' },
     { id: 4, title: 'Send a new message', icon: '✉️' },
     { id: 5, title: 'Add a new volunteer', icon: '👥' },

@@ -31,7 +31,7 @@ const GridExample = () => {
     { make: "Mercedes", model: "C-Class", price: 41100, electric: false },
     { make: "Mercedes", model: "EQC", price: 67900, electric: true },
     { make: "Fiat", model: "500", price: 15774, electric: false },
-    { make: "Fiat", model: "Panda", price: 14000, electric: false },
+    { make: "Fiat", model: "Panda", price: 14000, electric: false }, 
     { make: "Fiat", model: "Tipo", price: 20475, electric: false },
     { make: "Fiat", model: "500 Electric", price: 29900, electric: true },
     { make: "Nissan", model: "Juke", price: 20675, electric: false },
@@ -47,7 +47,7 @@ const GridExample = () => {
   ]);
 
   return (
-    <div className="grid-example-container">test
+    <div className="grid-example-container">
       <Form setRowData={setRowData} />
       <CarGrid rowData={rowData} />
     </div>
