@@ -1,3 +1,8 @@
+const QueriesPage = () => {
+    const [question, setQuestion] = useState("");
+    const [image, setImage] = useState(null);
+  
+    
 const Querypage = () => {
   return (
     <div>
