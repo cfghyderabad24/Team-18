@@ -61,3 +61,12 @@ const Authenticate = () => {
         phone: logphone,
         password: logpassword
       });
+
+      console.log(response.data);
+
+      if (response.data.message === 'success') {
+        showAlert("Login success", "success");
+        setIsLoggedIn(true);
+      } else {
+        showAlert("Login failed. Please check your credentials.", "danger");
+      }
