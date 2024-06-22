@@ -16,3 +16,23 @@ const Authenticate = () => {
 
   const navigate = useNavigate();
   const [alertt, setAlert] = useState(null);
+
+  const showAlert = (message, type) => {
+    setAlert({
+      msg: message,
+      type: type
+    });
+    setTimeout(() => {
+      setAlert(null);
+    }, 1500);
+  };
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('http://localhost:5000/register', {
+        reguser,
+        regphone,
+        regpassword
+      });
