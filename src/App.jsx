@@ -3,15 +3,16 @@ import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-route
 import GridExample from './GridExample.jsx';
 import Cards from './Cards.jsx';
 import NewMessage from './NewMessage.jsx'
+import RespondToQuery from './RespondToQuery.jsx';
 
 const App = () => {
   const navigate = useNavigate();
 
   const cardsData = [
     { id: 1, title: 'Data visualization with tables', icon: '📊', path: "/grid-example" },
-    { id: 2, title: 'Data visualization with charts', icon: '📈' , path : "/new-message" },
-    { id: 3, title: 'Respond to given queries', icon: '💬' },
-    { id: 4, title: 'Send a new message', icon: '✉️' },
+    { id: 2, title: 'Data visualization with charts', icon: '📈' },
+    { id: 3, title: 'Respond to given queries', icon: '💬' , path : "/respond-to-query" },
+    { id: 4, title: 'Send a new message', icon: '✉️' , path : "/new-message" },
     { id: 5, title: 'Add a new volunteer', icon: '👥' },
     { id: 6, title: 'Add a new farmer', icon: '👩‍🌾' },
   ];
@@ -36,6 +37,7 @@ const App = () => {
       } />
       <Route exact path="/grid-example" element={<GridExample />} />
       <Route exact path="/new-message" element = {<NewMessage/>}/>
+      <Route exact path= "/respond-to-query" element = {<RespondToQuery />}/>
     </Routes>
   );
 };
