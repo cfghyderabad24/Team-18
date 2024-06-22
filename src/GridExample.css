@@ -1,4 +1,7 @@
 /* General container styling */
+.body{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .grid-example-container {
     display: flex;
     flex-direction: column;
