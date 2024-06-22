@@ -99,7 +99,6 @@ const Authenticate = () => {
                 <Alert alertt={alertt} className="modal "/> {/* Corrected prop name */}
                   <h6 className="mb-0 pb-3">
                     <span style={{ color: 'white' }}>Log In </span>
-                    <span style={{ color: 'white' }}>Sign Up</span>
                   </h6>
                   <input className="checkbox" type="checkbox" id="reg-log" name="reg-log" />
                   <label htmlFor="reg-log"></label>

@@ -14,6 +14,7 @@ import Page1 from './components/Page1';
 import Page2 from './components/Page2';
 import Page3 from './components/Page3';
 import MainEditFormPage from './components/MainEditFormPage';
+import Authenticate1 from './components/Authenticate1'; 
 function App() {
   const location = useLocation(); // Use useLocation hook from react-router-dom
 
@@ -49,7 +50,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path='/farmer' element={<Authenticate />} />
       <Route path='/form' element={<Form />} />
-      <Route path='/volunteer' element={<Authenticate />} />
+      <Route path='/volunteer' element={<Authenticate1 />} />
       <Route path='/page1' element={<Page1></Page1>}/>
       <Route path='/page2' element={<Page2></Page2>}/>
       <Route path='/page3' element={<Page3></Page3>}/>
