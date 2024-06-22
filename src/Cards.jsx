@@ -11,7 +11,7 @@ const Cards = () => {
         { id: 3, title: 'Respond to given queries', icon: '💬', path: '/respond-to-query' },
         { id: 4, title: 'Send a new message', icon: '✉️', path: '/new-message' },
         { id: 5, title: 'Add a new volunteer', icon: '👥' },
-        { id: 6, title: 'Add a new farmer', icon: '👩‍🌾' },
+        { id: 6, title: 'Add a new farmer', icon: '👩‍🌾' , path : '/new-farmer' },
     ];
 
     const handleCardClick = (path) => {

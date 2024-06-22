@@ -5,6 +5,7 @@ import Cards from './Cards.jsx';
 import NewMessage from './NewMessage.jsx'
 import RespondToQuery from './RespondToQuery.jsx';
 import DataCharts from './DataCharts.jsx';
+import { NewFarmer } from './NewFarmer.jsx';
 
 const App = () => {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ const App = () => {
     { id: 3, title: 'Respond to given queries', icon: '💬' , path : "/respond-to-query" },
     { id: 4, title: 'Send a new message', icon: '✉️' , path : "/new-message" },
     { id: 5, title: 'Add a new volunteer', icon: '👥' },
-    { id: 6, title: 'Add a new farmer', icon: '👩‍🌾' },
+    { id: 6, title: 'Add a new farmer', icon: '👩‍🌾' , path : "/new-farmer" },
   ];
 
   const handleCardClick = (path) => {
@@ -41,6 +42,7 @@ const App = () => {
       <Route exact path="/new-message" element = {<NewMessage/>}/>
       <Route exact path= "/respond-to-query" element = {<RespondToQuery />}/>
       <Route exact path="/data-charts" element = {<DataCharts/>} />
+      <Route exact path = "/new-farmer" element = {<NewFarmer/>}/>
     </Routes>
   );
 };
