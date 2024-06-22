@@ -4,26 +4,14 @@ import styled from 'styled-components';
 
 const App = () => {
   const [formData, setFormData] = useState({
-    farmerName: '',
+    gender: '',
+    age: '',
+    village: '',
+    state: '',
     pincode: '',
     aadharNumber: '',
-    contactNumber: '',
-    state: '',
-    village: '',
-    age: '',
-    gender: '',
     areaPloughed: '',
-    season: '',
-    cropGrown: '',
-    seedsUsed: '',
-    varietyUsed: '',
-    quantityUsed: '',
-    dateOfSeedSown: '',
-    transplanting: '',
-    irrigationMethod: '',
-    fertilizersUsed: '',
-    dateOfHarvesting: '',
-    yield: ''
+    fertilizersUsed: ''
   });
 
   const handleChange = (e) => {
@@ -34,7 +22,7 @@ const App = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/form', formData);
+      const response = await axios.post('http://localhost:4000/api/v1/auth/signup', formData);
       console.log('Form submitted successfully', response.data);
     } catch (error) {
       console.error('Error submitting the form', error);
@@ -42,58 +30,20 @@ const App = () => {
   };
 
   return (
-    <FormContainer className="colorgradient">
+    <FormContainer>
       <h1>Farmer's Information</h1>
       <StyledForm onSubmit={handleSubmit}>
         <label>
-          Farmer's Name
-          <input type="text" name="farmerName" value={formData.farmerName} onChange={handleChange} required />
-        </label>
-        <label>
           Pincode
-          <input type="text" name="pincode" value={formData.pincode} onChange={handleChange} required />
+          <input type="number" name="pincode" value={formData.pincode} onChange={handleChange} required />
         </label>
         <label>
           Aadhar Number
-          <input type="text" name="aadharNumber" value={formData.aadharNumber} onChange={handleChange} required />
-        </label>
-        <label>
-          Contact Number
-          <input type="text" name="contactNumber" value={formData.contactNumber} onChange={handleChange} required />
+          <input type="number" name="aadharNumber" value={formData.aadharNumber} onChange={handleChange} required />
         </label>
         <label>
           State
-          <select name="state" value={formData.state} onChange={handleChange} required>
-            <option value="">Select State</option>
-            <option value="Andhra Pradesh">Andhra Pradesh</option>
-            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-            <option value="Assam">Assam</option>
-            <option value="Bihar">Bihar</option>
-            <option value="Chhattisgarh">Chhattisgarh</option>
-            <option value="Goa">Goa</option>
-            <option value="Gujarat">Gujarat</option>
-            <option value="Haryana">Haryana</option>
-            <option value="Himachal Pradesh">Himachal Pradesh</option>
-            <option value="Jharkhand">Jharkhand</option>
-            <option value="Karnataka">Karnataka</option>
-            <option value="Kerala">Kerala</option>
-            <option value="Madhya Pradesh">Madhya Pradesh</option>
-            <option value="Maharashtra">Maharashtra</option>
-            <option value="Manipur">Manipur</option>
-            <option value="Meghalaya">Meghalaya</option>
-            <option value="Mizoram">Mizoram</option>
-            <option value="Nagaland">Nagaland</option>
-            <option value="Odisha">Odisha</option>
-            <option value="Punjab">Punjab</option>
-            <option value="Rajasthan">Rajasthan</option>
-            <option value="Sikkim">Sikkim</option>
-            <option value="Tamil Nadu">Tamil Nadu</option>
-            <option value="Telangana">Telangana</option>
-            <option value="Tripura">Tripura</option>
-            <option value="Uttar Pradesh">Uttar Pradesh</option>
-            <option value="Uttarakhand">Uttarakhand</option>
-            <option value="West Bengal">West Bengal</option>
-          </select>
+          <input type="text" name="state" value={formData.state} onChange={handleChange} required />
         </label>
         <label>
           Village
@@ -119,47 +69,6 @@ const App = () => {
           <input type="number" name="areaPloughed" step="0.01" value={formData.areaPloughed} onChange={handleChange} required />
         </label>
         <label>
-          Season
-          <input type="text" name="season" value={formData.season} onChange={handleChange} required />
-        </label>
-        <label>
-          Crop Grown
-          <input type="text" name="cropGrown" value={formData.cropGrown} onChange={handleChange} required />
-        </label>
-        <label>
-          Seeds Used
-          <select name="seedsUsed" value={formData.seedsUsed} onChange={handleChange} required>
-            <option value="">Select Seed Source</option>
-            <option value="Own">Own</option>
-            <option value="Given by IFTR">Given by IFTR</option>
-            <option value="Purchased from Outside">Purchased from Outside</option>
-          </select>
-          <input type="text" name="varietyUsed" placeholder="Variety Used" value={formData.varietyUsed} onChange={handleChange} required />
-          <input type="number" name="quantityUsed" placeholder="Quantity Used" value={formData.quantityUsed} onChange={handleChange} required />
-        </label>
-        <label>
-          Date of Seed Sown
-          <input type="date" name="dateOfSeedSown" value={formData.dateOfSeedSown} onChange={handleChange} required />
-        </label>
-        <label>
-          Transplanting
-          <select name="transplanting" value={formData.transplanting} onChange={handleChange} required>
-            <option value="">Select Transplanting Method</option>
-            <option value="Manual">Manual</option>
-            <option value="Machine">Machine</option>
-          </select>
-        </label>
-        <label>
-          Irrigation Method
-          <select name="irrigationMethod" value={formData.irrigationMethod} onChange={handleChange} required>
-            <option value="">Select Irrigation Method</option>
-            <option value="Borewell">Borewell</option>
-            <option value="Well">Well</option>
-            <option value="River">River</option>
-            <option value="Drip Irrigation">Drip Irrigation</option>
-          </select>
-        </label>
-        <label>
           Fertilizers Used
           <select name="fertilizersUsed" value={formData.fertilizersUsed} onChange={handleChange} required>
             <option value="">Select Fertilizer Type</option>
@@ -168,15 +77,7 @@ const App = () => {
             <option value="Bioinputs">Bioinputs</option>
           </select>
         </label>
-        <label>
-          Date of Harvesting
-          <input type="date" name="dateOfHarvesting" value={formData.dateOfHarvesting} onChange={handleChange} required />
-        </label>
-        <label>
-          Yield (kg)
-          <input type="number" name="yield" step="0.01" value={formData.yield} onChange={handleChange} required />
-        </label>
-        <button class="button-71" type="submit">Submit</button>
+        <button className="button-71" type="submit">Submit</button>
       </StyledForm>
     </FormContainer>
   );
@@ -193,9 +94,7 @@ const FormContainer = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
-const
-
- StyledForm = styled.form`
+const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -227,38 +126,29 @@ const
   }
 
   .button-71 {
-  widht:20%;
-  box-sizing: border-box;
-  background-color: #0078d0;
-  border: 0;
-  border-radius: 56px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  outline: 0;
-  padding: 16px 21px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: all .3s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-
-
-@media (min-width: 768px) {
-  .button-71 {
-    padding: 16px 48px;
+    background-color: #0078d0;
+    border: 0;
+    border-radius: 56px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    outline: 0;
+    padding: 16px 21px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
   }
-}
 
-
-   
+  @media (min-width: 768px) {
+    .button-71 {
+      padding: 16px 48px;
     }
   }
 `;
