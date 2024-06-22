@@ -10,6 +10,7 @@ const queryRoutes = require("./routes/Query");
 
 const database = require("./config/database");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -20,6 +21,12 @@ database.connect();
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(
+    cors({
+        origin: "http://localhost:3000",
+        credentials: true
+    })
+)
 
 app.use("/api/v1/auth", userRoutes);
 app.use("/api/v1/notif", notifRoutes);
