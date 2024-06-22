@@ -7,7 +7,8 @@ import Alert from './Alert'; // Corrected import path
 import { Link } from "react-router-dom";
 
 const Authenticate = () => {
-  const [reguser, setReguser] = useState('');
+  const [firstname, setFirstName] = useState('');
+  const[lastname,setLastName]=useState('');
   const [regphone, setRegphone] = useState('');
   const [regpassword, setRegpassword] = useState('');
   const [logphone, setLogphone] = useState('');
@@ -32,7 +33,8 @@ const Authenticate = () => {
 
     try {
       const response = await axios.post('http://localhost:5000/register', {
-        reguser,
+        firstname,
+        lastname,
         regphone,
         regpassword
       });
@@ -130,7 +132,11 @@ const Authenticate = () => {
                             <div className="section text-center">
                               <h4 className="mt-3">Sign Up</h4>
                               <div className="form-group mt-2">
-                                <input type="text" name="reguser" className="form-style" placeholder="Your Full Name" id="logname" autoComplete="off" required onChange={(e) => setReguser(e.target.value)} />
+                                <input type="text" name="firstname" className="form-style" placeholder="Your First Name" id="logname" autoComplete="off" required onChange={(e) => setLastName(e.target.value)} />
+                                <i className="input-icon uil uil-user"></i>
+                              </div>
+                              <div className="form-group mt-2">
+                                <input type="text" name="lastname" className="form-style" placeholder="Your Last Name" id="logname" autoComplete="off" required onChange={(e) => setFirstName(e.target.value)} />
                                 <i className="input-icon uil uil-user"></i>
                               </div>
                               <div className="form-group mt-3">
