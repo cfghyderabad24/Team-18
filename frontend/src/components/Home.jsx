@@ -8,10 +8,10 @@ export default function Home() {
     <>
       <Backvid></Backvid>
       <div className="container homewelcome">
-        <h1 className="display-2">    🌾 Empowering Farmers, One Seed at a Time
+        <h1 className="display-2" style={{color:'white'}}>    🌾 Empowering Farmers, One Seed at a Time
         </h1>
         <div>
-        <Link className="forbuttons" to="/farmer" role="button" >
+        <Link className="forbuttons" style={{color:'white'}} to="/farmer" role="button" >
         <span></span>
         <span></span>
         <span></span>
