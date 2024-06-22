@@ -21,3 +21,10 @@ h1 {
 .form-group {
   margin-bottom: 15px;
 }
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #555;
+}
