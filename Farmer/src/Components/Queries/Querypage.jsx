@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Querypage.css";
 
 const QueriesPage = () => {
   const [question, setQuestion] = useState("");
