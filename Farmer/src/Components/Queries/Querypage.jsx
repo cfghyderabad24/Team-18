@@ -13,6 +13,7 @@ const Querypage = () => {
               required
             ></textarea>
           </div>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
