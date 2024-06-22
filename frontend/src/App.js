@@ -6,7 +6,6 @@ import ScrollToTop from './components/ScrollToTop';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {  Routes, Route } from 'react-router-dom';
-import Demo from './components/Demo';
 import { UserContext } from './UserContext';
 import { useLocation } from 'react-router-dom';
 import Authenticate from './components/Authenticate';
@@ -44,7 +43,6 @@ function App() {
       <ScrollToTop />
       <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/home" element={<Demo />} />
       <Route path='/farmer' element={<Authenticate />} />
       <Route path='/form' element={<Form />} />
       <Route path='/volunteer' element={<Authenticate />} />
