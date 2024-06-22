@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-
+import MainEditFormPage from './MainEditFormPage';
 const App = () => {
   const [formData, setFormData] = useState({
     gender: '',
@@ -30,6 +30,8 @@ const App = () => {
   };
 
   return (
+    <>
+    <MainEditFormPage></MainEditFormPage>
     <FormContainer>
       <h1>Edit Farmer's Information</h1>
       <StyledForm onSubmit={handleSubmit}>
@@ -77,6 +79,7 @@ const App = () => {
         <button className="button-71" type="submit">Submit</button>
       </StyledForm>
     </FormContainer>
+    </>
   );
 };
 

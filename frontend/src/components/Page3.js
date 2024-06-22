@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/Messages.css";
-
+import  MainEditForm from "./MainEditFormPage";
 const Messages = () => {
   const [messages, setMessages] = useState([
     {
@@ -32,6 +32,8 @@ const Messages = () => {
   };
 
   return (
+    <>
+    <MainEditForm></MainEditForm>
     <div className="messages-page">
       <h1>Notifications</h1>
       <div className="messages-list">
@@ -52,6 +54,7 @@ const Messages = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
