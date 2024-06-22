@@ -176,7 +176,7 @@ const App = () => {
           Yield (kg)
           <input type="number" name="yield" step="0.01" value={formData.yield} onChange={handleChange} required />
         </label>
-        <button type="submit">Submit</button>
+        <button class="button-71" type="submit">Submit</button>
       </StyledForm>
     </FormContainer>
   );
@@ -226,18 +226,39 @@ const
     margin-top: 5px;
   }
 
-  button {
-    padding: 10px;
-    background: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    margin-top: 20px;
+  .button-71 {
+  widht:20%;
+  box-sizing: border-box;
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
-    &:hover {
-      background: #45a049;
+
+
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
+}
+
+
+   
     }
   }
 `;

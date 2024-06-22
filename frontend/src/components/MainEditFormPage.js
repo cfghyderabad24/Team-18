@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import '../styles/MainEditFormPage.css'
 const App = () => {
   const styles = {
     body: {
@@ -15,7 +15,7 @@ const App = () => {
     button: {
       display: 'inline-block',
       padding: '15px 30px',
-      margin: '10px',
+      margin: '30px',
       fontSize: '16px',
       color: 'white',
       textDecoration: 'none',
@@ -35,9 +35,9 @@ const App = () => {
 
   return (
     <div style={styles.body}>
-      <Link to="/page1" style={{ ...styles.button, ...styles.button1 }}>Button 1</Link>
-      <Link to="/page2" style={{ ...styles.button, ...styles.button2 }}>Button 2</Link>
-      <Link to="/page3" style={{ ...styles.button, ...styles.button3 }}>Button 3</Link>
+      <Link to="/page1" class="button-29">Button 1</Link>
+      <Link to="/page2" class="button-29">Button 2</Link>
+      <Link to="/page3" class="button-29">Button 3</Link>
     </div>
   );
 }
