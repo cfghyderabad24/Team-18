@@ -209,3 +209,58 @@ exports.login = async(req, res) => {
         });
     }
 };
+
+
+exports.update = async (req, res) => {
+    try {
+        const  userId  = req.user.id;
+        console.log(userId);
+        const {
+            firstName,
+            lastName,
+            age,
+            gender,
+            village,
+            state,
+            pincode,
+            aadharNumber,
+            areaPloughed,
+            fertilizersUsed
+        } = req.body;
+
+        const updateFields = {};
+
+        if (firstName !== undefined) updateFields.firstName = firstName;
+        if (lastName !== undefined) updateFields.lastName = lastName;
+        if (age !== undefined) updateFields.age = age;
+        if (gender !== undefined) updateFields.gender = gender;
+        if (village !== undefined) updateFields.village = village;
+        if (state !== undefined) updateFields.state = state;
+        if (pincode !== undefined) updateFields.pincode = pincode;
+        if (aadharNumber !== undefined) updateFields.aadharNumber = aadharNumber;
+        if (areaPloughed !== undefined) updateFields.areaPloughed = areaPloughed;
+        if (fertilizersUsed !== undefined) updateFields.fertilizersUsed = fertilizersUsed;
+
+        const user = await User.findByIdAndUpdate(userId, updateFields, { new: true });
+
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: "User not found"
+            });
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: "User details updated successfully",
+            user
+        });
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            success: false,
+            message: "User details cannot be updated. Please try again later"
+        });
+    }
+};
+
