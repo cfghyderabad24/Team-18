@@ -4,7 +4,6 @@ import GridExample from './GridExample.jsx';
 import Cards from './Cards.jsx';
 import NewMessage from './NewMessage.jsx'
 import RespondToQuery from './RespondToQuery.jsx';
-import D
 import DataCharts from './DataCharts.jsx';
 
 const App = () => {
