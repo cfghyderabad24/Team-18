@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AgGridReact } from '@ag-grid-community/react'; // React Grid Logic
 import '@ag-grid-community/styles/ag-grid.css'; // Core CSS
 import '@ag-grid-community/styles/ag-theme-alpine.css'; // Theme CSS
-import './App.css'; // Custom CSS for styling
+import './GridExample.css'; // Custom CSS for styling
 
 import { ModuleRegistry } from '@ag-grid-community/core';
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
@@ -23,25 +23,33 @@ const GridExample = () => {
     { name: "Vijaya", age: 37, gender: "Female", fieldSize: 7, pincode: 602003, state: "Tamil Nadu", village: "Thiruvallur", yield: 3200, cropType: "Barley", irrigationMethod: "Well", fertilizerUse: "Organic" }
   ]);
 
+  const columnDefs = [
+    { headerName: "Name", field: "name", filter: 'agSetColumnFilter' },
+    { headerName: "Age", field: "age", filter: 'agNumberColumnFilter' },
+    { headerName: "Gender", field: "gender", filter: 'agSetColumnFilter' },
+    { headerName: "Field Size (acres)", field: "fieldSize", filter: 'agNumberColumnFilter' },
+    { headerName: "Pincode", field: "pincode", filter: 'agNumberColumnFilter' },
+    { headerName: "State", field: "state", filter: 'agSetColumnFilter' },
+    { headerName: "Village", field: "village", filter: 'agSetColumnFilter' },
+    { headerName: "Yield (kg)", field: "yield", filter: 'agNumberColumnFilter' },
+    { headerName: "Crop Type", field: "cropType", filter: 'agSetColumnFilter' },
+    { headerName: "Irrigation Method", field: "irrigationMethod", filter: 'agSetColumnFilter' },
+    { headerName: "Fertilizer Use", field: "fertilizerUse", filter: 'agSetColumnFilter' }
+  ];
+
   return (
     <div className="grid-example-container">
       <h1>FARMERS AND THEIR DETAILS</h1>
       <div className="ag-theme-alpine" style={{ height: 400, width: '100%' }}>
         <AgGridReact
           rowData={rowData}
-          columnDefs={[
-            { headerName: "Name", field: "name" },
-            { headerName: "Age", field: "age" },
-            { headerName: "Gender", field: "gender" },
-            { headerName: "Field Size (acres)", field: "fieldSize" },
-            { headerName: "Pincode", field: "pincode" },
-            { headerName: "State", field: "state" },
-            { headerName: "Village", field: "village" },
-            { headerName: "Yield (kg)", field: "yield" },
-            { headerName: "Crop Type", field: "cropType" },
-            { headerName: "Irrigation Method", field: "irrigationMethod" },
-            { headerName: "Fertilizer Use", field: "fertilizerUse" },
-          ]}
+          columnDefs={columnDefs}
+          defaultColDef={{
+            sortable: true,
+            filter: true,
+            floatingFilter: true,
+            resizable: true,
+          }}
         />
       </div>
     </div>

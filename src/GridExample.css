@@ -1,0 +1,61 @@
+/* General container styling */
+.grid-example-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Increased width */
+  }
+  
+  /* Heading styling */
+  .grid-example-container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Ag-Grid theme adjustments */
+  .ag-theme-alpine {
+    width: 100%;
+    height: 80vh; /* Adjust the height to display more rows */
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Add some margin and padding for grid cells */
+  .ag-theme-alpine .ag-cell {
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  /* Adjust header styling */
+  .ag-theme-alpine .ag-header-cell {
+    background-color: #004085;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Row stripe colors for better readability */
+  .ag-theme-alpine .ag-row:nth-child(odd) {
+    background-color: #f0f8ff;
+  }
+  
+  .ag-theme-alpine .ag-row:nth-child(even) {
+    background-color: #ffffff;
+  }
+  
+  /* Hover effect on rows */
+  .ag-theme-alpine .ag-row-hover {
+    background-color: black;
+    color: black; /* Text color changes to black */
+  }
+  
+  /* Ensure text color for header cells on hover */
+  .ag-theme-alpine .ag-header-cell:hover {
+    color: black; /* Header text color changes to black on hover */
+  }
+  
