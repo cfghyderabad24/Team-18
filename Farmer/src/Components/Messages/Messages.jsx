@@ -1,5 +1,28 @@
 import "./Messages.css";
 
+const messages = [
+  {
+    id: 1,
+    title: "Weather change",
+    content:
+      "There is going to be a weather change its going to have a heavy rain for 2 days",
+    timestamp: "2 hours ago",
+  },
+  {
+    id: 3,
+    title: "New fertilizer available",
+    content:
+      "A new organic fertilizer is available in the market at the lowest prices. Farmers can go and purchase it",
+    timestamp: "2024-06-20 10:00 AM",
+  },
+  {
+    id: 2,
+    title: "Survey report",
+    content: "The survey report is generated. Please go and check",
+    timestamp: "2 hours ago",
+  },
+];
+
 const Messages = () => {
   return (
     <div className="messages-page">
