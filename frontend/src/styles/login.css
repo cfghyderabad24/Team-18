@@ -125,9 +125,10 @@ body{
   border: 2px solid white;
   box-shadow: rgb(0, 0, 0) 0px 50px 100px -20px,
     rgb(0, 0, 0) 0px 30px 60px -30px;
-    background: #200122;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #3a6186;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
       background-position: bottom center;
   background-repeat: no-repeat;
   background-size: auto;
@@ -179,11 +180,11 @@ body{
   letter-spacing: 0.5px;
   outline: none;
   color: #060505;
-  background-color: rgba(67, 192, 35, 0.879); /* Adjust the alpha value (0.7) for transparency */
+  background-color: rgba(35, 192, 137, 0.879); /* Adjust the alpha value (0.7) for transparency */
   border: none;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
-  box-shadow: 0 4px 10px 0 rgba(85, 228, 33, 0.479);
+  box-shadow: 0 4px 10px 0 rgba(228, 225, 33, 0.479);
 }
 
 .login .form-style:focus,
