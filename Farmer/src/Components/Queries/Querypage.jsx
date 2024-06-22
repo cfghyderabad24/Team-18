@@ -17,8 +17,15 @@ const Querypage = () => {
           </div>
           <div className="form-group">
             <label htmlFor="image">Upload an Image:</label>
-            <input type="file" id="image" name="image" accept="image/*" />
+            <input
+              type="file"
+              id="image"
+              name="image"
+              accept="image/*"
+              onChange={handleImageChange}
+            />
           </div>
+
           <button type="submit">Submit</button>
         </form>
       </div>
