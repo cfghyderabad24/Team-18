@@ -36,3 +36,5 @@ const Authenticate = () => {
         regphone,
         regpassword
       });
+
+      console.log(response.data);
