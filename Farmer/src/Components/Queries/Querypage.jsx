@@ -9,6 +9,8 @@ const Querypage = () => {
             <textarea
               id="question"
               name="question"
+              value={question}
+              onChange={handleQuestionChange}
               placeholder="Type your question here..."
               required
             ></textarea>
