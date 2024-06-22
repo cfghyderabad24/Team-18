@@ -3,6 +3,8 @@ const app = express();
 
 const userRoutes = require("./routes/User");
 const notifRoutes = require("./routes/Notifications");
+const harvestRoutes = require("./routes/HarvestCycle");
+const soilRoutes = require("./routes/SoilDetails");
 
 const database = require("./config/database");
 const cookieParser = require("cookie-parser");
@@ -19,6 +21,8 @@ app.use(cookieParser());
 
 app.use("/api/v1/auth", userRoutes);
 app.use("/api/v1/notif", notifRoutes);
+app.use("/api/v1/harvest", harvestRoutes);
+app.use("/api/v1/soil", soilRoutes);
 
 app.get("/", (req, res) => {
     return res.json({

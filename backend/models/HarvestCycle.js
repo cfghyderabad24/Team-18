@@ -11,7 +11,8 @@ const harvestCycleSchema = new mongoose.Schema({
         enum: ["Summer", "Winter", "Autumn", "Spring", "Rainy"]
     },
     seedSownDate: {
-        type: Date.now(),
+        type: Date,
+        default: Date.now(),
         required: true
     },
     transplanting: {
@@ -23,7 +24,7 @@ const harvestCycleSchema = new mongoose.Schema({
         enum: ["Borewell", "Well", "River", "Drip Irrigation"]
     },
     seedHarvestDate: {
-        type: Date.now()
+        type: Date,
     },
     yield: {
         type: Number,
