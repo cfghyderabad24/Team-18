@@ -42,7 +42,11 @@ const userSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: "Notifications"
         }
-    ]
+    ],
+    queries: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Query"
+    },
 }, {timestamps: true});
 
 module.exports = mongoose.model("User", userSchema);
