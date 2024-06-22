@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Cards.css'
+import './Cards.css';
 
 const Cards = () => {
     const navigate = useNavigate();
@@ -22,6 +22,7 @@ const Cards = () => {
 
     return (
         <>
+            <h1 className="dashboard-heading">THE ADMIN DASHBOARD</h1>
             <div className="cards-container">
                 {cardsData.map((card) => (
                     <div key={card.id} className="card" onClick={() => handleCardClick(card.path)}>

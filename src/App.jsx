@@ -27,12 +27,13 @@ const App = () => {
     <Routes>
       <Route exact path="/" element={
         <div className="cards-container">
-          {cardsData.map((card) => (
+            <Cards />
+          {/* {cardsData.map((card) => (
             <div key={card.id} className="card" onClick={() => handleCardClick(card.path)}>
               <span className="card-icon">{card.icon}</span>
               <span className="card-title">{card.title}</span>
             </div>
-          ))}
+          ))} */}
         </div>
       } />
       <Route exact path="/grid-example" element={<GridExample />} />
