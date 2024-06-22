@@ -37,17 +37,17 @@ const Messages = () => {
       <div className="messages-list">
         {messages.map((message) => (
           <div key={message.id} className="message">
-            <div className="message-content">
-              <h2>{message.title}</h2>
-              <p>{message.content}</p>
-              <span>{message.timestamp}</span>
-            </div>
             <button
               className="dismiss-button"
               onClick={() => handleDismiss(message.id)}
             >
               ×
             </button>
+            <div className="message-content">
+              <h2>{message.title}</h2>
+              <p>{message.content}</p>
+              <span>{message.timestamp}</span>
+            </div>
           </div>
         ))}
       </div>
