@@ -38,3 +38,17 @@ const Authenticate = () => {
       });
 
       console.log(response.data);
+
+      if ('success' === 'success') {
+        showAlert("Registration success", "success");
+        navigate('/form');
+        setIsLoggedIn(true);
+      } else {
+        navigate('/farmer');
+        showAlert("Registration failed", "warning");
+      }
+    } catch (error) {
+      console.error('Error registering user:', error);
+      showAlert("Registration failed", "warning");
+    }
+  };
