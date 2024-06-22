@@ -75,3 +75,88 @@ const Authenticate = () => {
       showAlert("Enter valid information", "danger");
     }
   };
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate('/home');
+      
+    }
+  }, [isLoggedIn, navigate]);
+
+  if (isLoggedIn) {
+    return null; // Don't render the component if logged in
+  }
+
+  return (
+    <>
+
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-body login">
+            <div className="container">
+              <div className="row full-height justify-content-center">
+                <div className="section text-center">
+                <Alert alertt={alertt} className="modal "/> {/* Corrected prop name */}
+                  <h6 className="mb-0 pb-3">
+                    <span style={{ color: 'white' }}>Log In </span>
+                    <span style={{ color: 'white' }}>Sign Up</span>
+                  </h6>
+                  <input className="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+                  <label htmlFor="reg-log"></label>
+                  <div className="card-3d-wrap mx-auto slide-fwd-center">
+                    <div className="card-3d-wrapper">
+                      <div className="card-front">
+
+                        <form style={{ backgroundImage:` url(${bg}) `, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                          <div className="center-wrap">
+                            <div className="section text-center">
+                              <h4 className="mb-4 pb-3">Log In</h4>
+                              <div className="form-group mt-3">
+                                <input type="tel" name="phone" className="form-style" placeholder="Your Phone Number" id="logphone" autoComplete="off" required onChange={(e) => setLogphone(e.target.value)} />
+                                <i className="input-icon uil uil-mobile-android-alt"></i>
+                              </div>
+                              <div className="form-group mt-3">
+                                <input type="password" name="password" className="form-style" placeholder="Your Password" id="logpass" autoComplete="off" required onChange={(e) => setLogpassword(e.target.value)} />
+                                <i className="input-icon uil uil-lock-alt"></i>
+                              </div>
+                              <Link to='./MainBody'  className="forbuttons" onClick={handleLogin}><span></span><span></span><span></span><span></span>Login</Link>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div className="card-back">
+                        <form onSubmit={handleRegister} style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                          <div className="center-wrap">
+                            <div className="section text-center">
+                              <h4 className="mt-3">Sign Up</h4>
+                              <div className="form-group mt-2">
+                                <input type="text" name="reguser" className="form-style" placeholder="Your Full Name" id="logname" autoComplete="off" required onChange={(e) => setReguser(e.target.value)} />
+                                <i className="input-icon uil uil-user"></i>
+                              </div>
+                              <div className="form-group mt-3">
+                                <input type="tel" name="regphone" className="form-style" placeholder="Your Phone Number" id="logphone" autoComplete="off" required onChange={(e) => setRegphone(e.target.value)} />
+                                <i className="input-icon uil uil-mobile-android-alt"></i>
+                              </div>
+                             
+                              <div className="form-group mt-3 ">
+                                <input type="password" name="regpassword" className="form-style" placeholder="Your Password" id="logpass" autoComplete="off" required onChange={(e) => setRegpassword(e.target.value)} />
+                                <i className="input-icon uil uil-lock-alt"></i>
+                              </div>
+                              <Link to='./form'  className="forbuttons" onClick={handleRegister}><span></span><span></span><span></span><span></span>Register</Link>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Authenticate;
