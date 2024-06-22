@@ -5,3 +5,14 @@ import '../styles/login.css'
 import { useNavigate } from 'react-router-dom';
 import Alert from './Alert'; // Corrected import path
 import { Link } from "react-router-dom";
+
+const Authenticate = () => {
+  const [reguser, setReguser] = useState('');
+  const [regphone, setRegphone] = useState('');
+  const [regpassword, setRegpassword] = useState('');
+  const [logphone, setLogphone] = useState('');
+  const [logpassword, setLogpassword] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const navigate = useNavigate();
+  const [alertt, setAlert] = useState(null);
