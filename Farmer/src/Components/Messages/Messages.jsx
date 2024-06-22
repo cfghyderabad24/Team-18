@@ -23,6 +23,11 @@ const messages = [
   },
 ];
 
+const handleDismiss = (id) => {
+  const newMessages = messages.filter((message) => message.id !== id);
+  console.log(newMessages);
+};
+
 const Messages = () => {
   return (
     <div className="messages-page">
@@ -30,6 +35,12 @@ const Messages = () => {
       <div className="messages-list">
         {messages.map((message) => (
           <div key={message.id} className="message">
+            <button
+              className="dismiss-button"
+              onClick={() => handleDismiss(message.id)}
+            >
+              x
+            </button>
             <h2>{message.title}</h2>
             <p>{message.content}</p>
             <span>{message.timestamp}</span>
