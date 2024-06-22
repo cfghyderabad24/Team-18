@@ -10,7 +10,7 @@ const Cards = () => {
         { id: 2, title: 'Data visualization with charts', icon: '📈' , path : '/data-charts'},
         { id: 3, title: 'Respond to given queries', icon: '💬', path: '/respond-to-query' },
         { id: 4, title: 'Send a new message', icon: '✉️', path: '/new-message' },
-        { id: 5, title: 'Add a new volunteer', icon: '👥' },
+        { id: 5, title: 'Add a new volunteer', icon: '👥' , path : '/new-volunteer' },
         { id: 6, title: 'Add a new farmer', icon: '👩‍🌾' , path : '/new-farmer' },
     ];
 

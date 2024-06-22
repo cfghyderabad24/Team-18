@@ -6,6 +6,7 @@ import NewMessage from './NewMessage.jsx'
 import RespondToQuery from './RespondToQuery.jsx';
 import DataCharts from './DataCharts.jsx';
 import { NewFarmer } from './NewFarmer.jsx';
+import NewVolunteer from './NewVolunteer.jsx';
 
 const App = () => {
   const navigate = useNavigate();
@@ -43,6 +44,7 @@ const App = () => {
       <Route exact path= "/respond-to-query" element = {<RespondToQuery />}/>
       <Route exact path="/data-charts" element = {<DataCharts/>} />
       <Route exact path = "/new-farmer" element = {<NewFarmer/>}/>
+      <Route exact path = "/new-volunteer" element = {<NewVolunteer />}/>
     </Routes>
   );
 };
