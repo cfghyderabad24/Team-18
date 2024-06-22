@@ -70,3 +70,8 @@ const Authenticate = () => {
       } else {
         showAlert("Login failed. Please check your credentials.", "danger");
       }
+    } catch (error) {
+      console.error('Error logging in:', error);
+      showAlert("Enter valid information", "danger");
+    }
+  };
