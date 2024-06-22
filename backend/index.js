@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 
 const userRoutes = require("./routes/User");
+const notifRoutes = require("./routes/Notifications");
 
 const database = require("./config/database");
 const cookieParser = require("cookie-parser");
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api/v1/auth", userRoutes);
+app.use("/api/v1/notif", notifRoutes);
 
 app.get("/", (req, res) => {
     return res.json({
