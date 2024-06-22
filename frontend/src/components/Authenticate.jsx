@@ -52,3 +52,6 @@ const Authenticate = () => {
       showAlert("Registration failed", "warning");
     }
   };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
