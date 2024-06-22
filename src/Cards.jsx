@@ -22,7 +22,7 @@ const Cards = () => {
 
     return (
         <>
-            <h1 className="dashboard-heading" style={{color : "dark-green"}}>THE ADMIN DASHBOARD</h1>
+            <h1 className="dashboard-heading" style={{color : '#32c36c'}}>THE ADMIN DASHBOARD</h1>
             <div className="cards-container">
                 {cardsData.map((card) => (
                     <div key={card.id} className="card" onClick={() => handleCardClick(card.path)}>
