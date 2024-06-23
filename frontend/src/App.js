@@ -15,6 +15,14 @@ import Page2 from './components/Page2';
 import Page3 from './components/Page3';
 import MainEditFormPage from './components/MainEditFormPage';
 import Authenticate1 from './components/Authenticate1'; 
+import Admin from './components/Admin';
+import GridExample from './components/GridExample';
+import NewMessage from './components/NewMessage';
+import RespondToQuery from './components/RespondToQuery';
+import DataCharts from './components/DataCharts';
+import NewVolunteer from './components/NewVolunteer';
+import { useNavigate } from 'react-router-dom';
+import NewFarmer from './components/NewFarmer';
 function App() {
   const location = useLocation(); // Use useLocation hook from react-router-dom
 
@@ -55,6 +63,13 @@ function App() {
       <Route path='/page2' element={<Page2></Page2>}/>
       <Route path='/page3' element={<Page3></Page3>}/>
       <Route path='/MainEditFormPage' element={<MainEditFormPage></MainEditFormPage>}/>
+      <Route path='/admin' element={<Admin />} />
+      <Route exact path="/grid-example" element={<GridExample />} />
+      <Route exact path="/new-message" element = {<NewMessage/>}/>
+      <Route exact path= "/respond-to-query" element = {<RespondToQuery />}/>
+      <Route exact path="/data-charts" element = {<DataCharts/>} />
+      <Route exact path = "/new-farmer" element = {<NewFarmer/>}/>
+      <Route exact path = "/new-volunteer" element = {<NewVolunteer />}/>
       </Routes>
       
     </>

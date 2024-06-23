@@ -1,11 +1,13 @@
 import React from "react";
 import Backvid from "./Backvid";
 import { Link } from "react-router-dom";  
+import Admin from "./Admin";
 export default function Home() {
   
 
   return (
     <>
+      
       <Backvid></Backvid>
       <div className="container homewelcome">
         <h1 className="display-2" style={{color:'white'}}>    🌾 Empowering Farmers, One Seed at a Time
@@ -23,6 +25,12 @@ export default function Home() {
         <span></span>
         <span></span>
         Volunteer
+        </Link> <Link className="forbuttons" to="/admin" >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        NGO
         </Link></div>
       </div>
 
