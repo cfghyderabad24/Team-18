@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { PieChart, Pie, Tooltip, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend } from 'recharts';
 import './DataCharts.css';
 
-function DataCharts() {
+function DataCharts() { 
     const farmersData = [
         { name: "Ram", age: 45, gender: "Male", fieldSize: 10, pincode: 504105, state: "Telangana", village: "Nirmal", yield: 5000, cropType: "Wheat", irrigationMethod: "Borewell", fertilizerUse: "Organic" },
         { name: "Nirmala", age: 38, gender: "Female", fieldSize: 15, pincode: 522601, state: "AndhraPradesh", village: "Narasaraopet", yield: 7000, cropType: "Rice", irrigationMethod: "Well", fertilizerUse: "Chemical" },
