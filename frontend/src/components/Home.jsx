@@ -17,7 +17,7 @@ export default function Home() {
         <span></span>
         <span></span>
         Farmer
-        </Link><Link className="forbuttons" to="/volunteer" role="button" >
+        </Link><Link className="forbuttons" to="/volunteer" style={{color:'white'}} role="button" >
         <span></span>
         <span></span>
         <span></span>
